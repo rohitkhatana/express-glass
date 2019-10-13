@@ -1,3 +1,5 @@
+//TODO: need to write test case, these are just helping function for testing
+
 const logger = require('../index')
 
 const config = {
@@ -8,9 +10,8 @@ const config = {
 }
 
 console.log(logger.contextMiddleware)
-console.log(logger.logger().info('----foo-----'))
-
-//test1 requestId should be logged if not available
-
-//test1 if config is not available throw error
+logger.logger().info()
+logger.logger().info('--single info---')
+logger.logger().info('multiple info', 'info1', 'info2' )
+logger.logger().error('--failed---')
 
