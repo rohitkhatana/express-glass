@@ -18,10 +18,7 @@ function __logger() {
 }
 
 module.exports = {
-
-  logger: () => {
-    return __logger()
-  },
+  logger: () => __logger(),
   contextMiddleware: contextMiddleware,
   httpContextMiddleware: httpContext.middleware,
   httpContext: httpContext,

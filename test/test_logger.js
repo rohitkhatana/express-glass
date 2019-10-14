@@ -12,6 +12,6 @@ const config = {
 console.log(logger.contextMiddleware)
 logger.logger().info()
 logger.logger().info('--single info---')
-logger.logger().info('multiple info', 'info1', 'info2' )
+logger.logger().info('multiple info', 'info1', 'info2')
 logger.logger().error('--failed---')
 
