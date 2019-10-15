@@ -22,5 +22,5 @@ module.exports = {
   contextMiddleware: contextMiddleware,
   httpContextMiddleware: httpContext.middleware,
   httpContext: httpContext,
-  restClient: () => RestClient(__logger(), httpContext)
+  restClient: RestClient(__logger(), httpContext)
 }
