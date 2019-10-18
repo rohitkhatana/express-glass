@@ -47,12 +47,16 @@ const {logger, restClient} = require('express-glass');
 //it will forward the current request id to other service
 function fetchUser(user_id) {
   //as we are using axios under the hood, we can use all available function provided by axios
-  return await restClient.create({url: 'foo'}).get(user_id)
+  return await restClient.create({url: 'foo.com'}).get(`/users/${user_id}`)
 }
 //it will log the current request trace id
 function foo() {
   logger().info('it's a fun');
 }
 
-
 ```
+
+example logs:
+
+```[2019-10-18T19:49:11.980] [INFO] default - it's a fun xRequestId: 5f884282-7d7f-4f8d-aa8b-64340fdbedfd```
+```[2019-10-18T19:51:21.924] [INFO] default - Request to Service:, body=>  foo.com/user/1  xRequestId: 5f884282-7d7f-4f8d-aa8b-64340fdbedfd```
