@@ -1,5 +1,5 @@
 # express-glass
-A library for distributed tracing a request
+A library for tracing a distributed request
 
 This library depends on the following packages:
 
